@@ -1,0 +1,35 @@
+{
+  "name": {
+    "label": "Name",
+    "type": "text",
+    "placeholder": "Roasted chicken",
+    "validation": "Minimum 3 characters."
+  },
+
+  "image": {
+    "label": "Image URL",
+    "type": "text",
+    "placeholder": "https://roastello.com/images/roasted-chicken.jpg",
+    "validation": "Make sure that URL ends with one of the usual image extensions."
+  },
+  "select": {
+    "label": "Category"
+  },
+  "price": {
+    "label": "Price",
+    "type": "number",
+    "placeholder": 50,
+    "validation": "Can't be 0 or negative."
+  },
+  "ingredients": {
+    "label": "Ingredients",
+    "type": "text",
+    "placeholder": "Beef, Garlic, Rosemary, Butter",
+    "validation": "Separate ingredients with comma."
+  },
+  "description": {
+    "label": "Description",
+    "validation": "Minimum of 100 characters.",
+    "placeholder": "Lorem ipsum dolor sit amet. Qui iusto eaque et voluptas numquam in praesentium vero in quia blanditiis et nulla internos rem aperiam quam id sunt facere. Vel consequatur officiis non rerum error aut culpa quibusdam vel sint nisi ut reiciendis nostrum id sunt quia aut reprehenderit aliquid."
+  }
+}

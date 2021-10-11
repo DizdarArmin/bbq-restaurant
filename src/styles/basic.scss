@@ -1,0 +1,47 @@
+*:active,
+*:focus {
+  outline: none;
+  border: none;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  padding: 48px 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  height: 44px;
+  width: 100%;
+  padding-left: 8px;
+  border: none;
+  background-color: white;
+}
+
+textarea {
+  border: 1px solid $light-brown;
+}
+
+a {
+  font-size: 24px;
+  color: white;
+  &:hover {
+    color: $brown;
+  }
+}
+
+span {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+}

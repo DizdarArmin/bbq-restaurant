@@ -1,0 +1,72 @@
+.container-fluid {
+  min-width: 320px;
+  min-height: 100vh;
+}
+.container {
+  min-width: 320px;
+  padding-bottom: 480px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button {
+    min-height: 44px;
+    width: 100%;
+    height: 100%;
+  }
+}
+.btn {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.text-area {
+  textarea {
+    width: 100%;
+    height: 100;
+    height: 250px;
+    padding: 16px;
+  }
+  textarea:active,
+  textarea:focus {
+    outline: none;
+  }
+}
+
+.navbar {
+  height: 88px;
+  min-width: 320px;
+  background-color: black !important;
+  opacity: 0.8;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.nav-brand,
+.nav-item {
+  width: 50%;
+  height: 100%;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  &:active {
+    color: red;
+  }
+}
+.nav-item {
+  justify-content: space-evenly;
+}
+
+.col-5,
+.col-2 .col-1 {
+  padding: 0 !important;
+}
+
+.row {
+  margin: 0;
+}

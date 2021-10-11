@@ -1,0 +1,19 @@
+{
+  "name": {
+    "label": "Name",
+    "type": "text",
+    "placeholder": "Chicken dishes",
+    "validation": "Minimum 3 characters."
+  },
+  "image": {
+    "label": "Image URL",
+    "type": "text",
+    "placeholder": "https://roastello.com/images/roasted-chicken.jpg",
+    "validation": "Make sure that URL ends with one of the usual image extensions."
+  },
+  "description": {
+    "label": "Description",
+    "placeholder": "Lorem ipsum dolor sit amet. Qui iusto eaque et voluptas numquam in praesentium vero in quia blanditiis et nulla internos rem aperiam quam id sunt facere. Vel consequatur officiis non rerum error aut culpa quibusdam vel sint nisi ut reiciendis nostrum id sunt quia aut reprehenderit aliquid.",
+    "validation": "Minimum of 100 characters"
+  }
+}
