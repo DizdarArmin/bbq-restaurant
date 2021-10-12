@@ -5,6 +5,9 @@
 .container {
   min-width: 320px;
   padding-bottom: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .actions {
@@ -54,19 +57,16 @@
   align-self: flex-start;
   display: flex;
   align-items: center;
-  &:active {
-    color: red;
-  }
 }
 .nav-item {
   justify-content: space-evenly;
 }
 
 .col-5,
-.col-2 .col-1 {
+.col-2 .col-1,
+.col-12 {
   padding: 0 !important;
+  margin: 0 !important;
 }
 
-.row {
-  margin: 0;
-}
+

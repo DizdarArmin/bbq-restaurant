@@ -9,11 +9,11 @@ export default function CategoryCard({ item }) {
       </div>
       <div className="col-12 col-md-6">
         <div className="card-content row">
-          <h3 className="card-title font-weight-bold">{name}</h3>
+          <h3 className="card-title  font-weight-bold">{name}</h3>
           <p className="description font-italic">{description}</p>
 
           <Link to={`/menu/${name.toLowerCase()}`}>
-            <button className="col-md-6 btn category-button">See more</button>
+            <button className="col-md  btn category-button">See more</button>
           </Link>
         </div>
       </div>
