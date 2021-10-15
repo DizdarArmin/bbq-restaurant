@@ -3,7 +3,9 @@ export default function ProductDetails({ item }) {
   const arrayOfIngredients = ingredients.split(",");
 
   const Ingredients = arrayOfIngredients.map((item, i) => (
-    <div key={i}>- {item.trim()}</div>
+    <div className="ingredient" key={i}>
+      ➤ {item.trim()}
+    </div>
   ));
 
   return (
@@ -15,6 +17,8 @@ export default function ProductDetails({ item }) {
         </h2>
         <br />
         <p> {description}</p>
+        <br />
+        <h3>Ingredients:</h3>
         <br />
         <div className="ingredients">{Ingredients}</div>
       </div>

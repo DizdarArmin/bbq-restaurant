@@ -8,6 +8,10 @@
   }
   margin-bottom: 16px;
 }
+
+.form {
+  width: 100%;
+}
 .text-area {
   width: 100%;
   textarea {
@@ -125,11 +129,11 @@
 
 .admin-nav {
   min-width: 320px;
-
   display: flex;
   justify-content: center;
   a {
-    padding: 24px;
+    padding: 16px;
+    font-size: 12px;
   }
 }
 .admin-card {
@@ -137,4 +141,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+section {
+  width: 100%;
 }
