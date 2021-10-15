@@ -14,6 +14,7 @@ export default function Text({ HTML, state, set }) {
         <small>{validation}</small>
         <small>{state.length} / 500</small>
       </div>
+      <br />
     </label>
   );
 }

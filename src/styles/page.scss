@@ -10,6 +10,7 @@
   min-height: 100vh;
   background-color: $black;
   color: white;
+  padding-bottom: 240px;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
 }
 .container {
@@ -18,6 +19,7 @@
   min-width: 280px;
   min-height: 100vh;
   height: fit-content;
+  padding: 16px;
   color: white;
 
   background-color: $black;

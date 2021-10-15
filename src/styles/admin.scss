@@ -33,7 +33,7 @@
 .add-product {
   opacity: 0.9;
   color: white;
-  padding: 24px;
+
   border-radius: 25px;
 }
 
@@ -60,11 +60,16 @@
 }
 
 .dropdown {
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   span {
     flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 .buttons {

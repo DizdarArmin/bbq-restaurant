@@ -11,6 +11,7 @@ export default function EditInput({ HTML, state, set }) {
         onChange={(event) => set(event.target.value)}
       />
       <small>{validation}</small>
+      <br />
     </label>
   );
 }
