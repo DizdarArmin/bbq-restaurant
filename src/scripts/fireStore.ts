@@ -1,4 +1,4 @@
-import { collection, doc } from "@firebase/firestore/lite";
+import { collection, doc, getDoc } from "@firebase/firestore/lite";
 import { getDocs, DocumentData } from "@firebase/firestore/lite";
 import { addDoc, deleteDoc, updateDoc } from "@firebase/firestore/lite";
 import { getFirestore } from "@firebase/firestore/lite";
@@ -6,6 +6,11 @@ import { getFirestore } from "@firebase/firestore/lite";
 import firebaseInstance from "../scripts/firebase";
 const db = getFirestore(firebaseInstance);
 
+export async function getDocument(path, document) {
+  const documentReference = doc(db, path, document);
+  const documentSnap = await getDoc(documentReference);
+  return documentSnap.data();
+}
 export async function getCollection(path: string) {
   const collectionReference = collection(db, path);
   const snapshot = await getDocs(collectionReference);

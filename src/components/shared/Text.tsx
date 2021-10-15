@@ -10,7 +10,7 @@ export default function Text({ HTML, state, set }) {
         value={state}
         onChange={(event) => set(event.target.value)}
       />
-      <div className="bottom-text-area">
+      <div>
         <small>{validation}</small>
         <small>{state.length} / 500</small>
       </div>

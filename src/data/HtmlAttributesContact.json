@@ -1,0 +1,17 @@
+{
+  "email": {
+    "label": "E-mail",
+    "type": "email",
+    "placeholder": "contact@roastello.com"
+  },
+  "address": {
+    "label": "Address",
+    "type": "text",
+    "placeholder": "Fried Street 123 B"
+  },
+  "number": {
+    "label": "Phone number",
+    "type": "tel",
+    "placeholder": "0987654321"
+  }
+}

@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function Sorter({ state, set }) {
   const [isAtoZ, setIsAtoZ] = useState(true);
-  const [query, setQuery] = useState("");
 
   function Sort(value: string) {
     if (isAtoZ) {
@@ -26,21 +25,17 @@ export default function Sorter({ state, set }) {
     set(search);
   }
   return (
-    <div className="row sorter">
-      <span className="col-4" onClick={() => Sort("name")}>
-        Name
-      </span>
-      <div className="col " onClick={() => Sort("category")}>
-        <span>Category</span>
-      </div>
-      <div className="col">
-        <input
-          className=" search"
-          placeholder="Search..."
-          type="text"
-          onChange={(event) => Search(event.target.value)}
-        />
-      </div>
+    <div className="sorter">
+      <span onClick={() => Sort("name")}>Name</span>
+
+      <span onClick={() => Sort("category")}>Category</span>
+
+      <input
+        className="search"
+        placeholder="Search..."
+        type="text"
+        onChange={(event) => Search(event.target.value)}
+      />
     </div>
   );
 }

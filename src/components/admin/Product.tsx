@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-import { ValidateProduct } from "../scripts/validate";
-import iProduct from "../types/iProduct";
-import FormProduct from "./shared/FormProduct";
-import ButtonCheck from "./shared/ButtonCheck";
-import ButtonDelete from "./shared/ButtonDelete";
-import { remove } from "../scripts/crud";
-import { updateDocument } from "../scripts/fireStore";
-import Dropdown from "./shared/Dropdown";
+import { ValidateProduct } from "../../scripts/validate";
+import iProduct from "../../types/iProduct";
+import FormProduct from "../shared/FormProduct";
+import ButtonCheck from "../shared/ButtonCheck";
+import ButtonDelete from "../shared/ButtonDelete";
+import { remove } from "../../scripts/remove";
+import { updateDocument } from "../../scripts/fireStore";
+import Dropdown from "../shared/Dropdown";
 
 interface iProps {
   item: iProduct;
@@ -29,9 +29,13 @@ export default function Product({ item }: iProps) {
 
   function update() {
     updateDocument("products", item.id, {name,price,category,imageURL,ingredients,description});
+    setTimeout(function () {
+      document.location.reload();
+    }, 1000);
   }
   return (
     //prettier-ignore
+    <section className="product">
     <Dropdown name={item.name} category={item.category}>  
       <FormProduct
           name={name} setName={setName} price={price} setPrice={setPrice}
@@ -39,16 +43,12 @@ export default function Product({ item }: iProps) {
           category={category} setCategory={setCategory}
           description={description} setDescription={setDescription} 
           ingredients={ingredients} setIngredients={setIngredients}>
-
-        <div className="col-12 col-md-6 actions">
-          <ButtonCheck  handler={() => update()} 
-                      lock={buttonDisabled}/>
-        </div>
-
-        <div className="col-12 col-md-6 actions">
-          <ButtonDelete handler={() => remove(name, item.id, "products")} />
-        </div>
+          <div className="buttons">
+            <ButtonCheck  handler={() => update()} lock={buttonDisabled}/>
+            <ButtonDelete handler={() => remove(name, item.id, "products")} />
+          </div>
       </FormProduct>
     </Dropdown>
+   </section>
   );
 }

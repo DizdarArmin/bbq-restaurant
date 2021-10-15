@@ -1,9 +1,9 @@
 import { FormEvent, useEffect, useState } from "react";
 
-import { createDocument } from "../scripts/fireStore";
-import { ValidateProduct } from "../scripts/validate";
-import ButtonSubmit from "./shared/ButtonSubmit";
-import FormProduct from "./shared/FormProduct";
+import { createDocument } from "../../scripts/fireStore";
+import { ValidateProduct } from "../../scripts/validate";
+import ButtonSubmit from "../shared/ButtonSubmit";
+import FormProduct from "../shared/FormProduct";
 //prettier-ignore
 export default function AddProduct() {
   const [name, setName] = useState("");
@@ -24,10 +24,13 @@ export default function AddProduct() {
     createDocument("products", {name: name,price: price,category: category,
       imageURL: imageURL,ingredients: ingredients,description: description,
     });
+    setTimeout(function () {
+      document.location.reload();
+    }, 1000);
   }
 
   return (
-    <section>
+    <section className="add-product">
       <h3>Add product</h3>
       <form onSubmit={(event) => onSubmit(event)} className="row">
         <FormProduct
@@ -36,9 +39,9 @@ export default function AddProduct() {
           category={category} setCategory={setCategory}
           description={description} setDescription={setDescription} 
           ingredients={ingredients} setIngredients={setIngredients}>
-            <div className="col-12 col-md-6 offset-md-6 actions">
-              <ButtonSubmit buttonDisabled={buttonDisabled} /> 
-            </div>
+
+          <ButtonSubmit buttonDisabled={buttonDisabled} /> 
+      
         </FormProduct>
       </form>
     </section>

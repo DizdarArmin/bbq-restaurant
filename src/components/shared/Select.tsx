@@ -11,12 +11,10 @@ export default function Select({ state, set, HTML }) {
 
   if (!categories)
     return (
-      <h3 className="text-danger bg-white p-2">
-        You won't be able to add product without adding category first.
-      </h3>
+      <h3>You won't be able to add product without adding category first.</h3>
     );
   return (
-    <label>
+    <label className="select">
       {label}
       <select value={state} onChange={(event) => set(event.target.value)}>
         <option disabled></option>

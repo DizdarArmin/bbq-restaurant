@@ -1,27 +1,50 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import ProductCard from "../components/ProductCard";
 
 import useCollection from "../hooks/useCollection";
 
-export default function CategoryPage() {
+export default function MenuCategory() {
   const { category }: any = useParams();
-  const { data, loading, error } = useCollection("products");
+  const { data: products } = useCollection("products");
+  const { data: categories } = useCollection("categories");
 
-  const [products, setProducts] = useState(data);
+  const [localProducts, setLocalProducts] = useState(products);
+  const [localCategory, setLocalCategory] = useState(categories);
 
-  useEffect(() => {
-    const filtered = data.filter(
+  function FilterProducts() {
+    const filteredProducts = products.filter(
       (item) => item.category.toLowerCase() === category
     );
-    setProducts(filtered);;
-  }, [data]);
+    setLocalProducts(filteredProducts);
+  }
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error</div>;
+  function FilterCategory() {
+    const filteredCategory = categories.filter(
+      (item) => item.name.toLowerCase() === category
+    );
+    setLocalCategory(filteredCategory);
+  }
+  useEffect(() => {
+    FilterProducts();
+    FilterCategory();
+  }, [products, categories]);
 
+  const Products = localProducts.map((item) => (
+    <ProductCard key={item.id} item={item} />
+  ));
   return (
-    <>
-      <div>{JSON.stringify(products)}ss</div>
-    </>
+    <div className="container-fluid">
+      <div className="container">
+        {localCategory.map((item, i) => (
+          <div className="category-description" key={i}>
+            <h2>{item.name}</h2>
+            <br />
+            <p>{item.description}</p>
+          </div>
+        ))}
+        {localProducts.length > 0 && Products}
+      </div>
+    </div>
   );
 }

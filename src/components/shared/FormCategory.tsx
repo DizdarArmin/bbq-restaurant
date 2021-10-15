@@ -6,15 +6,15 @@ export default function FormCategory({name,setName,image,setImage, description,s
 
   return (
     <>
-      <div className="col-12">
+      <div>
         <EditInput HTML={HTML.name} state={name} set={setName} />
       </div>
 
-      <div className="col-12">
+      <div>
         <EditInput HTML={HTML.image} state={image} set={setImage} />
       </div>
 
-      <div className="col-12">
+      <div>
         <Text HTML={HTML.description} state={description} set={setDescription}/>
       </div>
       {children}

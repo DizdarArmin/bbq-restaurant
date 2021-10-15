@@ -1,11 +1,9 @@
 export default function ButtonSubmit({ buttonDisabled }) {
   return (
-    <button
-      disabled={buttonDisabled}
-      className="btn submit-button"
-      type="submit"
-    >
-      ADD
-    </button>
+    <div className="submit-button">
+      <button disabled={buttonDisabled} type="submit">
+        ADD
+      </button>
+    </div>
   );
 }
