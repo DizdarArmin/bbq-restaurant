@@ -8,7 +8,7 @@ export default function AdminPage() {
         <AdminNavbar />
 
         <div className="product">
-          <h3>Products</h3>
+          <h3>Contact info</h3>
           <FormContact />
         </div>
       </div>
