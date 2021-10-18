@@ -7,21 +7,18 @@
 .container-fluid {
   width: 100%;
   min-width: 320px;
-  min-height: 100vh;
-  background-color: $black;
+  min-height: 80vh;
+
   color: white;
-  padding-bottom: 240px;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
 }
 .container {
   max-width: 1000px;
   margin: 0 auto;
   min-width: 280px;
-  min-height: 100vh;
+  min-height: 80vh;
   height: fit-content;
-  padding: 16px;
+  padding: 0 16px;
   color: white;
 
-  background-color: $black;
   opacity: 0.8;
 }

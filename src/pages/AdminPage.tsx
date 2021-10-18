@@ -3,7 +3,7 @@ import FormContact from "components/shared/FormContact";
 
 export default function AdminPage() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid admin">
       <div className="container">
         <AdminNavbar />
 

@@ -1,19 +1,20 @@
 import useDocument from "hooks/useDocument";
 import { useState, useEffect } from "react";
+import iContact from "types/iContact";
 export default function Contact() {
   const { data } = useDocument("contact", "contact");
-  const [contact, setContact] = useState(data);
+  const [contact, setContact] = useState(Object);
   const mapsQuery = `https://www.google.com/maps/search/?api=1&query=${data.address}`;
 
   useEffect(() => {
-    setContact(data);
+    setContact(data as iContact);
   }, [data]);
 
   return (
     <div className="container-fluid">
       <div className="container">
         <div className="contact">
-          {contact && (
+          {contact.email && (
             <div className="card">
               <label>
                 <i className="fas fa-phone-square-alt"></i>

@@ -5,21 +5,24 @@ import Product from "../components/admin/Product";
 import { useState, useEffect } from "react";
 import Sorter from "../components/shared/Sorter";
 import AdminNavbar from "components/shared/AdminNavbar";
+import iProduct from "types/iProduct";
+import Loading from "./Loading";
 
 export default function ManageProducts() {
-  const { data } = useCollection("products");
-  const [products, setProducts] = useState(data ?? []);
+  const { data, status } = useCollection("products");
+  const [products, setProducts] = useState(Array<iProduct>());
 
   useEffect(() => {
     setProducts(data);
   }, [data]);
-
+  
+  if (status === 1) return <Loading />;
   const Products = products.map((item) => (
     <Product key={item.id} item={item} />
   ));
 
   return (
-    <div className="container-fluid products">
+    <div className="container-fluid products admin">
       <div className="container">
         <AdminNavbar />
         <AddProduct />

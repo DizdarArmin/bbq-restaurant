@@ -6,8 +6,8 @@ import useCollection from "../hooks/useCollection";
 
 export default function MenuCategory() {
   const { category }: any = useParams();
-  const { data: products } = useCollection("products");
-  const { data: categories } = useCollection("categories");
+  const { data: products, status: productsStatus } = useCollection("products");
+  const { data: categories, status: categoriesStatus } = useCollection("categories");
 
   const [localProducts, setLocalProducts] = useState(products);
   const [localCategory, setLocalCategory] = useState(categories);
