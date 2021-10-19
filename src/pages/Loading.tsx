@@ -15,7 +15,7 @@ export default function Loading() {
         setCounter(counter + 1);
         setDisplay(toDisplay);
       }
-    }, 50);
+    }, 150);
   }, [display]);
   return (
     <div className="container-fluid">

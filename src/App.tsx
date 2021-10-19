@@ -11,12 +11,29 @@ import ManageProducts from "pages/ManageProducts";
 import Navbar from "components/Navbar";
 import Contact from "pages/Contact";
 import Flames from "components/shared/Flames";
+import { useEffect, useState } from "react";
+import Loading from "pages/Loading";
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(function () {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
+  if (loading)
+    return (
+      <>
+        <Flames />
+        <Loading />
+      </>
+    );
+
   return (
     <div className="App">
       <Flames />
-
       <Router>
         <Navbar />
         <Switch>
