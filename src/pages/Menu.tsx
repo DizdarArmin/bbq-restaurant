@@ -5,7 +5,7 @@ import Flames from "components/shared/Flames";
 export default function Menu() {
   const { data: categories, status } = useCollection("categories");
 
-  if (status === 0) return <Loading />;
+  if (status === 1) return <Loading />;
   const Categories = categories.map((item) => (
     <CategoryCard key={item.id} item={item} />
   ));
