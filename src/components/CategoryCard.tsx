@@ -15,7 +15,7 @@ export default function CategoryCard({ item }) {
         <h2>{name}</h2>
         <p>{description}</p>
         <div>
-          <Link to={`/${name.toLowerCase()}`}>
+          <Link to={`/menu/${name.toLowerCase()}`}>
             <div>See more</div>
           </Link>
         </div>

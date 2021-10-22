@@ -41,9 +41,9 @@ export default function App() {
           <Route path="/admin" component={AdminPage} />
           <Route path="/product-manager" component={ManageProducts} />
           <Route path="/category-manager" component={ManageCategories} />
-          <Route path="/menu" component={Menu} />
+          <Route path="/menu" exact component={Menu} />
           <Route path="/contact" component={Contact} />
-          <Route path="/:category/" component={MenuCategory} />
+          <Route path="/menu/:category/" component={MenuCategory} />
           <Route path="/:category/:product" component={MenuProduct} />
         </Switch>
       </Router>

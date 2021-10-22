@@ -14,7 +14,7 @@ export default function ProductCard({ item }) {
         <p>{description}</p>
         <br />
         <div>
-          <Link to={`/menu/${category.toLowerCase()}/${nameURL}`}>
+          <Link to={`/${category.toLowerCase()}/${nameURL}`}>
             <div>See more</div>
           </Link>
         </div>
