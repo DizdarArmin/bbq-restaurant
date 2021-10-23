@@ -15,7 +15,7 @@ export default function ManageProducts() {
   useEffect(() => {
     setProducts(data);
   }, [data]);
-  
+
   if (status === 1) return <Loading />;
   const Products = products.map((item) => (
     <Product key={item.id} item={item} />

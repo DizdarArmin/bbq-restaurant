@@ -4,6 +4,7 @@ export default function Loading() {
   const loading = "Loading...";
   const [display, setDisplay] = useState("");
 
+  // setTimeout...
   useEffect(() => {
     let toDisplay = display + loading[counter];
     setTimeout(function () {

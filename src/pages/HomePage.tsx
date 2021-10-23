@@ -7,6 +7,7 @@ export default function HomePage() {
   const location = ["area!", "town!", "country!"];
   const [display, setDisplay] = useState(location[0]);
 
+  // again setTimeout -1
   useEffect(() => {
     setTimeout(function () {
       setDisplay(location[counter]);
@@ -16,6 +17,7 @@ export default function HomePage() {
       }
     }, 1000);
   }, [counter]);
+
   return (
     <div className="container-fluid">
       <div className="container">

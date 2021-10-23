@@ -16,6 +16,7 @@ export default function Contact() {
         <div className="contact">
           {contact.email && (
             <div className="card">
+              {/* Refactor into components -1 */}
               <label>
                 <i className="fas fa-phone-square-alt"></i>
                 <a href={`tel:${contact.number}`}>{contact.number}</a>

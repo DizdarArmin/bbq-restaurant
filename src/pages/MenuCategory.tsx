@@ -7,7 +7,8 @@ import useCollection from "../hooks/useCollection";
 export default function MenuCategory() {
   const { category }: any = useParams();
   const { data: products, status: productsStatus } = useCollection("products");
-  const { data: categories, status: categoriesStatus } = useCollection("categories");
+  const { data: categories, status: categoriesStatus } =
+    useCollection("categories");
 
   const [localProducts, setLocalProducts] = useState(products);
   const [localCategory, setLocalCategory] = useState(categories);
@@ -25,6 +26,7 @@ export default function MenuCategory() {
     );
     setLocalCategory(filteredCategory);
   }
+  
   useEffect(() => {
     FilterProducts();
     FilterCategory();
@@ -33,6 +35,7 @@ export default function MenuCategory() {
   const Products = localProducts.map((item) => (
     <ProductCard key={item.id} item={item} />
   ));
+
   return (
     <div className="container-fluid">
       <div className="container">

@@ -17,6 +17,9 @@ import Loading from "pages/Loading";
 export default function App() {
   const [loading, setLoading] = useState(true);
 
+  // why a timeout? is for the flames loading? what if the download takes longer.
+  // this should be done using an on completed event listener.
+  // The intention is great but again a recruiter would notice this -0.1 (not full -1 because that would be mean)
   useEffect(() => {
     setTimeout(function () {
       setLoading(false);

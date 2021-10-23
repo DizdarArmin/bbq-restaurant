@@ -12,11 +12,14 @@ export default function Categories() {
     <Category key={item.id} item={item} />
   ));
 
+  // You should show me a message saying no category found, or please add a new category here and return early.
+
   return (
     <div className="container-fluid admin">
       <div className="container">
         <AdminNavbar />
         <AddCategory />
+        {/* What happens if categories is not bigger than 0? */}
         <div className="category">
           {categories.length > 0 && <h3>Categories</h3>}
           {categories.length > 0 && Categories}
