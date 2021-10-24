@@ -11,7 +11,6 @@ export default function Menu() {
   ));
   return (
     <div className="container-fluid">
-      <Flames />
       <div className="container">{categories.length > 0 && Categories}</div>
     </div>
   );
